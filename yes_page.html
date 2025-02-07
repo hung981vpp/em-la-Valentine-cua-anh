@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anh biết là em sẽ đồng ý mà :3</title>
+    <link rel="stylesheet" href="./yes_style.css">
+</head>
+<body>
+    <div class="image">
+    </div>
+        <div class="love">
+        </div>
+    <div class="container">
+        <h1 class="header_text"> Hí hí <3,<br> anh yêu em nhiều <br>lắmmmmmmmmmmm!</h1>
+        <div class="gif_container">
+            <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmo3c3l5ODh3ZGN6NHhhaDE2Mjg1ZjkwOXczdDFxbWM3dTBtaW9zaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/9XY4f3FgFTT4QlaYqa/giphy.gif">
+        </div>
+    </div>
+    <script>
+        const loveContainer = document.querySelector('.love');
+        
+        function createHeart() {
+            const heart = document.createElement('img');
+            heart.src = 'love.gif'; // Đảm bảo file love.gif đã được thêm vào thư mục dự án
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 2 + 3 + 's';
+            loveContainer.appendChild(heart);
+    
+            // Xóa trái tim sau khi animation kết thúc
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+    
+        // Tạo trái tim mới mỗi 300ms
+        setInterval(createHeart, 300);
+    </script>
+</body>
+</html>
