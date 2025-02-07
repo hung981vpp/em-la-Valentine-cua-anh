@@ -9,6 +9,7 @@ body {
     font-weight: 400;
     font-style: normal;
     flex-direction: column;
+    position: relative;
   }
   
   .image{
@@ -17,8 +18,9 @@ body {
     width: 100%;
     background-size: cover;
     background-position: center;
-    position: relative;
+    position: absolute;
     opacity: 0.5;
+    z-index: -1;
   }
 
   .container {
